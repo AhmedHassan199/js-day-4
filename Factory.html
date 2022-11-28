@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+// Declaring properties and methods with Factory functions
+
+function person (fullname, money, sleepmood, healthRate) {
+  return {
+   fullname,
+   money,
+   sleepmood,
+   healthRate,
+   sleep(hour) {
+    if(hour===7){
+    return ("happy")
+    }else if (hour > 7){
+       return("lazy")
+    }else{
+       return("tired")
+    }
+},
+eat(meals) {
+    if(meals === 3){
+        return   ("100 health rate")
+    }else if (meals === 2){
+       return  ("75 health rate")
+    }
+},
+
+buy(items){
+  return `decrese ${ items * 10  } lE `    }
+
+  }
+}
+
+const name= new person('Chris',20,"happy", 100)
+console.log(name);
+console.log(name.sleep(7))
+console.log(name.buy(2))
+
+</script>
+</body>
+</html>
